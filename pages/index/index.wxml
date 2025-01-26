@@ -1,0 +1,74 @@
+<!-- 轮播图 -->
+<view class="swiper">
+    <swiper autoplay circular interval="3000" indicator-dots indicator-color="#fff" indicator-active-color="#f3514f">
+        <swiper-item>
+            <image src="/assets/绿色出行.png" mode="aspectFill" show-menu-by-longpress/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/assets/绿色出行2.png" mode="aspectFill" show-menu-by-longpress/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/assets/绿色出行3.png" mode="aspectFill" show-menu-by-longpress/>
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 信息了解 -->
+<view class="info">
+    <view>
+        <navigator url="/pages/index/aboutUs/aboutUs" open-type="navigate">
+            <image src="/assets/关于我们.png" mode=""/>
+            <text>关于我们</text>
+        </navigator>
+    </view>
+    <view>
+        <navigator url="/pages/index/policyKnow/policyKnow" open-type="navigate">
+            <image src="/assets/政策.png" mode=""/>
+            <text>政策了解</text>
+        </navigator>
+    </view>
+    <view>
+        <navigator url="/pages/index/notice/notice" open-type="navigate">
+            <image src="/assets/注意事项.png" mode=""/>
+            <text>注意事项</text>
+        </navigator>
+    </view>
+    <view>
+        <navigator url="/pages/index/borrowRule/borrowRule" open-type="navigate">
+            <image src="/assets/规则.png" mode=""/>
+            <text>借道规则</text>
+        </navigator>
+    </view>
+</view>
+
+<view class="content">
+    <image class="logo" src="/assets/欢迎2.png" mode="heightFix"></image>
+    
+    <view class="description">
+      <text>拥挤的城市里</text>
+      <text>总要有一条特别的路</text>
+      <text>为你悄悄“开小灶”</text>
+    </view>
+
+</view>
+
+
+<!-- 预约 -->
+<view class="container">
+  <button class="btn" bindtap="goToBooking">点击预约</button>
+</view>
+
+<view class="swiper2">
+    <text>其他资讯</text>
+    <swiper autoplay circular interval="4000" indicator-dots indicator-color="#fff" indicator-active-color="#f3514f">
+        <swiper-item>
+            <image src="/assets/碳积分.png" mode="aspectFill" show-menu-by-longpress/>
+        </swiper-item>
+        <swiper-item>
+            <image src="/assets/加入我们.png" mode="aspectFill" show-menu-by-longpress/>
+        </swiper-item>
+    </swiper>
+</view>
+
+
+

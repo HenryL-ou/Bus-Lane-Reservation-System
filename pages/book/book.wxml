@@ -1,0 +1,196 @@
+<!--pages/function/function.wxml-->
+<view>
+    <view class="ad-block">
+        这个广告位 必须拿下
+    </view>
+    <!-- manu -->
+    <view class="top-manu">
+        <view class="top-manu-item" bindtap="bookHandel" data-tag="normalBook">
+            <image class="manu-icon" src="/assets/预约页面小图标1.png" mode="heightFix" />
+            <view class="manu-title">
+                一般预约
+            </view>
+        </view>
+        <view class="top-manu-item" bindtap="bookHandel" data-tag="fastBook">
+            <image class="manu-icon" src="/assets/预约页面小图标2.png" mode="heightFix" />
+            <view class="manu-title">
+                快速预约
+            </view>
+        </view>
+        <view class="top-manu-item" bindtap="bookHandel" data-tag="bookRecord">
+            <image class="manu-icon" src="/assets/预约页面小图标3.png" mode="heightFix" />
+            <view class="manu-title">
+                预约记录
+            </view>
+        </view>
+        <view class="top-manu-item" bindtap="bookHandel" data-tag="bookRule">
+            <image class="manu-icon" src="/assets/预约页面小图标4.png" mode="heightFix" />
+            <view class="manu-title">
+                预约规则
+            </view>
+        </view>
+    </view>
+
+    <!-- 日程 -->
+    <view class="receive-block">
+        <view style="font-size: 30rpx; color: #555; font-weight: 500;line-height: 40rpx;">
+            <view style="display: inline-block;"> 我的行程 </view>
+            <!-- 通知 -->
+            <view class="top-notify" bindtap="notifyHandel">
+                {{notifyText}}
+            </view>
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">8:00-10:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月15日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-春熙路
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">9:00-12:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月16日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-文化宫
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">18:00-20:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月17日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-东大路
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">14:00-15:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月18日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-玉双路
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">6:00-9:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月19日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-桀桀街
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">15:00-17:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月20日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-牛马街
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="items">
+            <view class="card line-item ">
+                <view class="receive-time">
+                    <view style="margin-top:24rpx; line-height: 40rpx; font-size: 26rpx; color:{{index ==0 && status==1?'rgba(250,0,0,0.7)':'rgb(12, 161, 247)'}}; font-weight: 700;">17:00-19:00</view>
+                    <view style="margin-top:0rpx; font-size: 20rpx; line-height: 30rpx; color: #666;">10月21日</view>
+                </view>
+                <view class="receive-info">
+                    <view style="float: left;">
+                        <view style="font-size: 28rpx;line-height: 40rpx; color: #666; ">
+                            西南交通大学-？？？
+                            <!-- 状态 -->
+                        </view>
+                    </view>
+                    <view class="receive-bottons" bindtap="downUp">
+                        <view>
+                            旅途中 | 已结束
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+
+    </view>
+
+</view>

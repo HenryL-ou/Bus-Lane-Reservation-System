@@ -1,0 +1,71 @@
+<!--pages/center/center.wxml-->
+
+<view>
+    <view id="background-image-view">
+        <image id="background-image" src="http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1010/13/c6/5494373_5494373_1286955435968.jpg" mode="widthFix" />
+    </view>
+    <view style="position: relative; top: -60rpx;">
+        <view class="contents">
+            <!--头像和昵称-->
+            <view class="avater-block-main">
+                <!-- 头像 -->
+                <view class="avater-block" bindtap="handleTap" data-idx="userInfo">
+                    <!-- 进入个人资料-->
+                    <image class="avatar-image" src="/assets/头像.png" mode="widthFix" />
+                </view>
+                <!--昵称-->
+                <view class="user-name-block" bindtap="handleTap" data-idx="userInfo">
+                    <text>团子</text>
+                    <image class="user-name-image" src="/assets/等级.png" mode="aspectFit" />
+                </view>
+            </view>
+
+            <!-- 信息 -->
+            <view class="user-info">
+                <view class="user-info-bliock">
+                    <view class="user-info-num">{{userInfo.userRecord.allTime!=null && userInfo.userRecord!=null && userInfo!=null?userInfo.userRecord.allTime: "-"}}</view>
+                    <view>预约总时长</view>
+                </view>
+                <view class="user-info-bliock" style="border-left: 0.5rpx solid #ccc; border-right: 0.5rpx solid #ccc; ">
+                    <view class="user-info-num">{{userInfo.userRecord.allRank!=null && userInfo.userRecord!=null ?userInfo.userRecord.allRank: "-"}}</view>
+                    <view>排名</view>
+                </view>
+                <view class="user-info-bliock">
+                    <view class="user-info-num">{{userInfo.userRecord.maxTime!=null && userInfo.userRecord!=null ?userInfo.userRecord.maxTime: "-"}}</view>
+                    <view>绿色贡献积分</view>
+                </view>
+
+            </view>
+        </view>
+
+        <view class="card info-block-a">
+            <view class="info-block">
+                <view bindtap="handleTap" data-idx="userInfo">
+                    <image class="icon" src="/assets/个人资料.png" />
+                    个人资料
+                </view>
+                <view  bindtap="handleTap" data-idx="mycredit">
+                    <image class="icon" src="/assets/信用卡.png" />
+                    我的信用
+                </view>
+                <view  bindtap="handleTap" data-idx="messages">
+                    <image class="icon" src="/assets/消息.png" />
+                    我的消息
+                </view>
+                <view bindtap="handleTap" data-idx="learnCount">
+                    <image class="icon" src="/assets/统计.png" />
+                    预约统计
+                </view>
+
+                <view bindtap="handleTap" data-idx="settings">
+                    <image class="icon" src="/assets/设置.png" />
+                    设置
+                </view>
+            </view>
+        </view>
+        <view style="position: relative; margin-top: 100rpx;"  bindtap="handleTap" data-idx="feedback">
+            <button class="recall">信息反馈</button>
+        </view>
+
+    </view>
+</view>

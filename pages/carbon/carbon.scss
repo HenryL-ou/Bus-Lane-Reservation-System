@@ -1,0 +1,234 @@
+/* 全局容器样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #6fcf97, #a8e6cf);
+  }
+  /* 顶部标题 */
+  .header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: -150rpx;
+  }
+  
+  .subscript {
+    font-size: 14px; /* 下标字体大小 */
+    vertical-align: sub; /* 垂直对齐到下标 */
+  }
+
+  .logo {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* 用户信息卡片 */
+  .user-card {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 40rpx;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .user-coins {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .user-level {
+    font-size: 14px;
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .info{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 40rpx;
+    view{
+        navigator{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        image{
+            width: 70rpx;
+            height: 70rpx;
+        }
+        text{
+            font-size: 24rpx;
+            margin-top: 12rpx;
+        }
+    }
+}
+
+  /* 积分记录 */
+/* 新增部分样式 */
+/* 新增部分样式 */
+.source-section, .action-section {
+    width: 90%;
+    margin-top: 40rpx;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20rpx;
+  }
+  
+  .source-list, .action-list {
+
+  }
+  
+  .source-item, .action-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20rpx;
+    border-bottom: 1rpx solid #eeeeee;
+  }
+  
+  .source-item:last-child, .action-card:last-child {
+    margin-bottom: 0;
+    
+  }
+  
+  .icon, .action-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+  }
+  
+  .description, .action-title {
+    font-size: 28rpx;
+    color: #555555;
+    flex: 1;
+  }
+  
+  .points {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .action-title {
+    font-weight: bold;
+  }
+  
+  .action-desc {
+    font-size: 24rpx;
+    color: #888888;
+  }
+  
+  
+
+  /* 排行榜 */
+  .rank-section {
+    width: 90%;
+    margin-top: 40rpx;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20rpx;
+  }
+  
+  .rank-list {
+    background-color: #ffffff;
+    padding: 20rpx;
+
+  }
+  
+  .rank-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 0;
+    border-bottom: 1rpx solid #eeeeee;
+  }
+  
+  .rank-item:last-child {
+    border-bottom: none;
+  }
+  
+  .rank {
+    font-size: 28rpx;
+    color: #555555;
+  }
+  
+  .name {
+    font-size: 28rpx;
+    color: #555555;
+  }
+  
+  .score {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  /* 动作按钮 */
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40rpx;
+  }
+  
+  .btn {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 25px;
+  }
+  
+  .primary {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .secondary {
+    background-color: #ffa000;
+    color: #fff;
+  }
+  

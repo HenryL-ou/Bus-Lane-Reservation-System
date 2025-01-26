@@ -1,0 +1,66 @@
+/* 全局布局 */
+page{
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f5f5f5;
+    height: 100%;
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* 内容部分 */
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 150rpx;
+    height: 150rpx;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .description {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  .section {
+    margin-top: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  text {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  

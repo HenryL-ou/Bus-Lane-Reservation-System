@@ -1,0 +1,6 @@
+<!-- map.wxml -->
+<view class="container">
+  <!-- 地图组件 -->
+  <map longitude="{{longitude}}" latitude="{{latitude}}" scale="14" polyline="{{polyline}}" markers="{{markers}}">
+  </map>
+</view>

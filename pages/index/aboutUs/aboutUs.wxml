@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="header">
+    <text class="title">关于我们</text>
+  </view>
+
+  <view class="content">
+    <image class="logo" src="/assets/欢迎辞.png" mode="aspectFit"></image>
+    
+    <view class="description">
+      <text>环游遍了整个星系</text>
+      <text>找不到​比你更亮的星星</text>
+    </view>
+
+
+    <view class="section">
+      <text class="section-title">我们是谁？</text>
+      <text>Nobody</text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">我们的使命</text>
+      <text>生活本该简单，出行也该如此。拥挤的城市里，总要有一条特别的路，为你悄悄“开小灶”。</text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">联系我们</text>
+      <text>邮箱: AboutUs@ourcompany.com</text>
+      <text>电话: 111-222-333</text>
+    </view>
+  </view>
+</view>

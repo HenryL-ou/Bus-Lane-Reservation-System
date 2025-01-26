@@ -1,0 +1,84 @@
+<view class="container">
+  <!-- 顶部 Logo 和标题 -->
+  <view class="header">
+    <view class="logo"><text>CO</text><text class="subscript">2</text> Credit</view>
+  </view>
+
+  <view class="info">
+    <view>
+        <navigator url="" open-type="navigate">
+            <image src="/assets/了解.png" mode=""/>
+            <text>了解碳积分</text>
+        </navigator>
+    </view>
+    <view>
+        <navigator url="" open-type="navigate">
+            <image src="/assets/问号.png" mode=""/>
+            <text>如何获取积分</text>
+        </navigator>
+    </view>
+    <view>
+        <navigator url="" open-type="navigate">
+            <image src="/assets/积分兑换.png" mode=""/>
+            <text>积分兑换</text>
+        </navigator>
+    </view>
+    <view>
+        <navigator url="" open-type="navigate">
+            <image src="/assets/我的积分.png" mode=""/>
+            <text>我的积分</text>
+        </navigator>
+    </view>
+</view>
+
+  <!-- 用户信息卡片 -->
+  <view class="user-card">
+    <image class="user-avatar" src="/assets/头像.png" mode="aspectFill" />
+    <view class="user-info">
+        <text class="user-name">团子</text>
+    </view>
+    <view class="user-info">
+        <text class="user-score">666分</text>
+    </view>
+    <view class="user-level">LV1</view>
+  </view>
+
+
+
+  <!--积分来源-->
+  <view class="source-section">
+    <text class="section-title">积分记录</text>
+    <view class="source-list">
+        <block wx:for="{{sources}}" wx:key="index">
+            <view class="source-item">
+                <image class="icon" src="{{item.icon}}" mode="heightFix"/>
+                <text class="description">{{item.description}}</text>
+                <text class="points">+{{item.points}}分</text>
+            </view>
+        </block>
+    </view>    
+  </view>
+
+
+  <!--排行榜-->
+  <view class="rank-section">
+    <text class="section-title">排行榜</text>
+    <view class="rank-list">
+      <block wx:for="{{rankList}}" wx:key="index">
+        <view class="rank-item">
+          <text class="rank">{{index + 1}}.</text>
+          <text class="name">{{item.name}}</text>
+          <text class="score">{{item.points}} 分</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+
+
+  <!-- 动作按钮 -->
+  <view class="actions">
+    <button class="btn secondary" bindtap="clockIn">打卡</button>
+  </view>
+
+</view>

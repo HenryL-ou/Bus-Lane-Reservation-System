@@ -1,0 +1,59 @@
+{
+    "entryPagePath": "pages/index/index",
+    "pages": [
+        "pages/index/index",
+        "pages/book/book",
+        "pages/carbon/carbon",
+        "pages/self/self",
+        "pages/index/aboutUs/aboutUs",
+        "pages/index/policyKnow/policyKnow",
+        "pages/index/notice/notice",
+        "pages/index/borrowRule/borrowRule",
+        "pages/book/normalBook/normalBook",
+        "pages/book/fastBook/fastBook",
+        "pages/book/bookRecord/bookRecord",
+        "pages/book/bookRule/bookRule",
+        "pages/book/mapBook/mapBook"
+    ],
+    "window": {
+        "navigationBarTitleText": "公交车道预约系统",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true,
+        "backgroundColor": "#efefef",
+        "backgroundTextStyle": "dark"
+    },
+    "tabBar": {
+        "selectedColor": "f3514f",
+        "color": "#666",
+        "list": [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "/assets/首页tab.png",
+                "selectedIconPath": "/assets/首页tab.png"
+            },
+            {
+                "text": "预约",
+                "pagePath": "pages/book/book",
+                "iconPath": "/assets/预约tab.png",
+                "selectedIconPath": "/assets/预约tab.png"
+            },
+            {
+                "text": "碳积分",
+                "pagePath": "pages/carbon/carbon",
+                "iconPath": "/assets/碳积分1.png",
+                "selectedIconPath": "/assets/碳积分1.png"
+            },
+            {
+                "text": "个人中心",
+                "pagePath": "pages/self/self",
+                "iconPath": "/assets/个人中心tab.png",
+                "selectedIconPath": "/assets/个人中心tab.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}
