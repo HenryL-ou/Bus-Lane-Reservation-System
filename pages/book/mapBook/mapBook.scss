@@ -1,1 +1,37 @@
-/* pages/book/mapBook/mapBook.wxss */
+.container0 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    right: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  input {
+    width: 100%;
+    height: 35px;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  map {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+  }
+  

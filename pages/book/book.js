@@ -7,7 +7,7 @@ Page({
         switch (tag) {
           case 'normalBook':
             wx.navigateTo({
-              url: '/pages/book/normalBook/normalBook', // 替换为你的目标页面路径
+              url: '/pages/book/mapBook/mapBook', // 替换为你的目标页面路径
             });
             break;
           case 'fastBook':

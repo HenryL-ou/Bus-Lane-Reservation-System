@@ -1,6 +1,14 @@
-<!-- map.wxml -->
-<view class="container">
-  <!-- 地图组件 -->
-  <map longitude="{{longitude}}" latitude="{{latitude}}" scale="14" polyline="{{polyline}}" markers="{{markers}}">
+<view class="container0">
+
+  <!-- 地图 -->
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"
+    markers="{{markers}}" polyline="{{polyline}}" show-location>
   </map>
+
+  <!-- 输入框 -->
+  <view class="input-container">
+    <input placeholder="请输入出发地" bindinput="onStartInput" bindconfirm="searchStart" />
+    <input placeholder="请输入目的地" bindinput="onEndInput" bindconfirm="searchEnd" />
+    <button bindtap="getRoute">获取路线</button>
+  </view>
 </view>
