@@ -35,3 +35,74 @@
     height: 100%;
   }
   
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background: #fff;
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .close-btn {
+    font-size: 24px;
+    color: #999;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .lane-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  .form-item {
+    margin-bottom: 15px;
+  }
+  
+  .picker {
+    margin-top: 8px;
+    padding: 8px;
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  .modal-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .confirm-btn {
+    background: #07c160;
+    color: white;
+    border-radius: 4px;
+  }
+  

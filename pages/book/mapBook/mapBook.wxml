@@ -2,7 +2,8 @@
 
   <!-- 地图 -->
   <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"
-    markers="{{markers}}" polyline="{{polyline}}" show-location>
+    markers="{{markers}}" polyline="{{polyline}}" show-location bindtap="onMapTap"
+    style="width: 100%; height: 100vh;">
   </map>
 
   <!-- 输入框 -->
@@ -10,5 +11,39 @@
     <input placeholder="请输入出发地" bindinput="onStartInput" bindconfirm="searchStart" />
     <input placeholder="请输入目的地" bindinput="onEndInput" bindconfirm="searchEnd" />
     <button bindtap="getRoute">获取路线</button>
+  </view>
+
+  <!-- 预约弹窗 -->
+  <view class="modal" wx:if="{{showReservationModal}}">
+    <view class="modal-content">
+      <view class="modal-header">
+        <text class="modal-title">预约公交专用道</text>
+        <text class="close-btn" bindtap="closeModal">×</text>
+      </view>
+      
+      <view class="modal-body">
+        <view class="lane-info">
+          <text>{{selectedBusLane.name}}</text>
+        </view>
+        
+        <view class="form-item">
+          <text>选择日期：</text>
+          <picker mode="date" value="{{selectedDate}}" start="{{selectedDate}}" end="2024-12-31" bindchange="onDateChange">
+            <view class="picker">{{selectedDate}}</view>
+          </picker>
+        </view>
+        
+        <view class="form-item">
+          <text>选择时段：</text>
+          <picker mode="selector" range="{{timeSlots}}" bindchange="onTimeSlotChange">
+            <view class="picker">{{selectedTimeSlot || '请选择时段'}}</view>
+          </picker>
+        </view>
+      </view>
+      
+      <view class="modal-footer">
+        <button class="confirm-btn" bindtap="onConfirmReservation">确认预约</button>
+      </view>
+    </view>
   </view>
 </view>
