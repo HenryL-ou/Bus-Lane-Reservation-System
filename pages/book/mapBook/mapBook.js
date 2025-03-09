@@ -424,10 +424,31 @@ Page({
     // 模拟预约成功
     wx.showToast({
         title: '预约成功',
-        icon: 'success'
-    });
-    this.closeModal();
-  },
+        icon: 'success',
+        success: () => {
+          // 从缓存读取当前积分并更新
+          wx.getStorage({
+            key: 'carbonPoints',
+            success: (res) => {
+              const newPoints = res.data - 20;
+              wx.setStorage({
+                key: 'carbonPoints',
+                data: newPoints
+              });
+            },
+            fail: () => {
+              // 首次使用初始化
+              wx.setStorage({
+                key: 'carbonPoints',
+                data: 666 - 20 // 初始值666，扣减20
+              });
+            }
+          });
+    
+          this.closeModal();
+        }
+      });
+    },
 
   closeModal() {
     this.setData({

@@ -38,7 +38,7 @@
         <text class="user-name">团子</text>
     </view>
     <view class="user-info">
-        <text class="user-score">666分</text>
+        <text class="user-score">{{userPoints}}分</text>
     </view>
     <view class="user-level">LV1</view>
   </view>
@@ -53,7 +53,7 @@
             <view class="source-item">
                 <image class="icon" src="{{item.icon}}" mode="heightFix"/>
                 <text class="description">{{item.description}}</text>
-                <text class="points">+{{item.points}}分</text>
+                <text class="points">{{item.points}}分</text>
             </view>
         </block>
     </view>    

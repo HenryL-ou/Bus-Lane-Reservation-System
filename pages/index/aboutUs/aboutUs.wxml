@@ -1,6 +1,6 @@
 <view class="container">
   <view class="header">
-    <text class="title">关于我们</text>
+    <text class="title">About us</text>
   </view>
 
   <view class="content">
