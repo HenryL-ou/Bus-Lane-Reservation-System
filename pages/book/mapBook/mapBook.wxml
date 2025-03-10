@@ -26,6 +26,19 @@
           <text>{{selectedBusLane.name}}</text>
         </view>
         
+        <view class="info-row">
+            <text>当前用户积分：</text>
+            <text>{{userPoints}}</text>
+          </view>
+          <view class="info-row">
+            <text>预约所需积分：</text>
+            <text>{{requiredPoints}}</text>
+          </view>
+          <view class="info-row">
+            <text>可预约数：</text>
+            <text>{{availableSlots}}</text>
+          </view>
+
         <view class="form-item">
           <text>选择日期：</text>
           <picker mode="date" value="{{selectedDate}}" start="{{selectedDate}}" end="2024-12-31" bindchange="onDateChange">
