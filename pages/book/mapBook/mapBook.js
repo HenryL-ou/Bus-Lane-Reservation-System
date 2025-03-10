@@ -333,7 +333,39 @@ Page({
             availableTimeStart: "07:00",
             availableTimeEnd: "21:00",
             status: "available"
-        }
+        },
+        // {
+
+        //   id: "5",
+        //   name: "火车南站东路公交专用道",
+        //   start: {
+        //       latitude: 30.608589,
+        //       longitude: 104.075482
+        //   },
+        //   end: {
+        //       latitude: 30.608348,
+        //       longitude: 104.079744
+        //   },
+        //   availableTimeStart: "07:00",
+        //   availableTimeEnd: "21:00",
+        //   status: "available"
+        // },
+        {
+
+          id: "6",
+          name: "锦绣大道公交专用道",
+          start: {
+              latitude: 30.605200,
+              longitude: 104.100655
+          },
+          end: {
+              latitude: 30.604786,
+              longitude: 104.107216
+          },
+          availableTimeStart: "07:00",
+          availableTimeEnd: "21:00",
+          status: "available"
+        },
         ]
     };
 
