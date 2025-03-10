@@ -305,32 +305,35 @@ Page({
             {
 
               id: "3",
-
               name: "二环路公交专用道",
-
               start: {
-
                   latitude: 30.642362,
-
                   longitude: 104.062837
-
               },
-
               end: {
-
                   latitude: 30.672362,
-
                   longitude: 104.082837
-
               },
-
               availableTimeStart: "07:00",
-
               availableTimeEnd: "19:00",
-
               status: "available"
+          },
+          {
 
-          }
+            id: "4",
+            name: "高攀路公交专用道",
+            start: {
+                latitude: 30.606489,
+                longitude: 104.086372
+            },
+            end: {
+                latitude: 30.605661,
+                longitude: 104.096119
+            },
+            availableTimeStart: "07:00",
+            availableTimeEnd: "21:00",
+            status: "available"
+        }
         ]
     };
 
