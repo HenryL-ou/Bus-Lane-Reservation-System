@@ -45,23 +45,6 @@ Page({
     // 获取公交专用道数据
     this.fetchBusLanes();
   },
-  //   onShow: function () {
-  //     // 调用接口
-  //     this.data.qqmapsdk.search({
-  //       keyword: "酒店",
-  //       success: function (res) {
-  //         console.log(res);
-  //         console.log("search成功了一下？");
-  //       },
-  //       fail: function (res) {
-  //         console.log(res);
-  //       },
-  //       complete: function (res) {
-  //         console.log(res);
-  //         console.log("search完成了一下？");
-  //       },
-  //     });
-  //   },
 
   // 监听输入框输入
   onStartInput(e) {
@@ -267,140 +250,153 @@ Page({
     });
   },
 
+
   // 添加新函数：从后端获取公交专用道数据
   fetchBusLanes() {
-    // 模拟从后端获取数据
-    const mockBusLanes = {
-        busLanes: [
-            {
-                id: "1",
-                name: "天府大道公交专用道",
-                start: {
-                    latitude: 30.657362,
-                    longitude: 104.065837
-                },
-                end: {
-                    latitude: 30.658362,
-                    longitude: 104.066837
-                },
-                availableTimeStart: "07:00",
-                availableTimeEnd: "09:00",
-                status: "available"
-            },
-            {
-                id: "2",
-                name: "人民南路公交专用道",
-                start: {
-                    latitude: 30.647362,
-                    longitude: 104.075837
-                },
-                end: {
-                    latitude: 30.648362,
-                    longitude: 104.076837
-                },
-                availableTimeStart: "17:00",
-                availableTimeEnd: "19:00",
-                status: "available"
-            },
-            {
+    // // 模拟从后端获取数据
+    // const mockBusLanes = {
+    //     busLanes: [
+    //         {
+    //             id: "1",
+    //             name: "天府大道公交专用道",
+    //             start: {
+    //                 latitude: 30.657362,
+    //                 longitude: 104.065837
+    //             },
+    //             end: {
+    //                 latitude: 30.658362,
+    //                 longitude: 104.066837
+    //             },
+    //             availableTimeStart: "07:00",
+    //             availableTimeEnd: "09:00",
+    //             status: "available"
+    //         },
+    //         {
+    //             id: "2",
+    //             name: "人民南路公交专用道",
+    //             start: {
+    //                 latitude: 30.647362,
+    //                 longitude: 104.075837
+    //             },
+    //             end: {
+    //                 latitude: 30.648362,
+    //                 longitude: 104.076837
+    //             },
+    //             availableTimeStart: "17:00",
+    //             availableTimeEnd: "19:00",
+    //             status: "available"
+    //         },
+    //         {
 
-              id: "3",
-              name: "二环路公交专用道",
-              start: {
-                  latitude: 30.642362,
-                  longitude: 104.062837
-              },
-              end: {
-                  latitude: 30.672362,
-                  longitude: 104.082837
-              },
-              availableTimeStart: "07:00",
-              availableTimeEnd: "19:00",
-              status: "available"
-          },
-          {
+    //           id: "3",
+    //           name: "二环路公交专用道",
+    //           start: {
+    //               latitude: 30.642362,
+    //               longitude: 104.062837
+    //           },
+    //           end: {
+    //               latitude: 30.672362,
+    //               longitude: 104.082837
+    //           },
+    //           availableTimeStart: "07:00",
+    //           availableTimeEnd: "19:00",
+    //           status: "available"
+    //       },
+    //       {
 
-            id: "4",
-            name: "高攀路公交专用道",
-            start: {
-                latitude: 30.606489,
-                longitude: 104.086372
-            },
-            end: {
-                latitude: 30.605661,
-                longitude: 104.096119
-            },
-            availableTimeStart: "07:00",
-            availableTimeEnd: "21:00",
-            status: "available"
-        },
-        // {
+    //         id: "4",
+    //         name: "高攀路公交专用道",
+    //         start: {
+    //             latitude: 30.606489,
+    //             longitude: 104.086372
+    //         },
+    //         end: {
+    //             latitude: 30.605661,
+    //             longitude: 104.096119
+    //         },
+    //         availableTimeStart: "07:00",
+    //         availableTimeEnd: "21:00",
+    //         status: "available"
+    //     },
+    //     // {
 
-        //   id: "5",
-        //   name: "火车南站东路公交专用道",
-        //   start: {
-        //       latitude: 30.608589,
-        //       longitude: 104.075482
-        //   },
-        //   end: {
-        //       latitude: 30.608348,
-        //       longitude: 104.079744
-        //   },
-        //   availableTimeStart: "07:00",
-        //   availableTimeEnd: "21:00",
-        //   status: "available"
-        // },
-        {
+    //     //   id: "5",
+    //     //   name: "火车南站东路公交专用道",
+    //     //   start: {
+    //     //       latitude: 30.608589,
+    //     //       longitude: 104.075482
+    //     //   },
+    //     //   end: {
+    //     //       latitude: 30.608348,
+    //     //       longitude: 104.079744
+    //     //   },
+    //     //   availableTimeStart: "07:00",
+    //     //   availableTimeEnd: "21:00",
+    //     //   status: "available"
+    //     // },
+    //     {
 
-          id: "6",
-          name: "锦绣大道公交专用道",
-          start: {
-              latitude: 30.605200,
-              longitude: 104.100655
-          },
-          end: {
-              latitude: 30.604786,
-              longitude: 104.107216
-          },
-          availableTimeStart: "07:00",
-          availableTimeEnd: "21:00",
-          status: "available"
-        },
-        ]
-    };
+    //       id: "6",
+    //       name: "锦绣大道公交专用道",
+    //       start: {
+    //           latitude: 30.605200,
+    //           longitude: 104.100655
+    //       },
+    //       end: {
+    //           latitude: 30.604786,
+    //           longitude: 104.107216
+    //       },
+    //       availableTimeStart: "07:00",
+    //       availableTimeEnd: "21:00",
+    //       status: "available"
+    //     },
+    //     ]
+    // };
+    wx.request({
+      url: "http://175.178.116.5:3000/bus-lanes", // 调用后端 API
+      method: "GET",
+      success: (res) => {
+          if (res.statusCode === 200) {
+              // 处理数据库返回的数据格式
+              const formattedBusLanes = res.data.map(lane => ({
+                  id: lane.id,
+                  name: lane.name,
+                  start: {
+                      latitude: lane.start_lat, // 调整数据库字段
+                      longitude: lane.start_lng
+                  },
+                  end: {
+                      latitude: lane.end_lat,
+                      longitude: lane.end_lng
+                  },
+                  availableTimeStart: lane.available_time_start.substring(0, 5), // 转换 "HH:MM:SS" -> "HH:MM"
+                  availableTimeEnd: lane.available_time_end.substring(0, 5),
+                  status: lane.status
+              }));
 
+              this.setData({
+                  busLanes: formattedBusLanes
+              });
+          } else {
+              console.error("获取公交专用道数据失败:", res);
+              wx.showToast({
+                  title: "获取公交专用道信息失败",
+                  icon: "none"
+              });
+          }
+      },
+      fail: (err) => {
+          console.error("请求公交专用道数据失败:", err);
+          wx.showToast({
+              title: "网络错误",
+              icon: "none"
+          });
+      }
+  });
     // 直接使用模拟数据
     this.setData({
         busLanes: mockBusLanes.busLanes
     });
-
-    // 当后端API准备好后，可以替换为以下代码：
-    /*
-    wx.request({
-        url: 'YOUR_BACKEND_API/bus-lanes',
-        method: 'GET',
-        success: (res) => {
-            if (res.statusCode === 200) {
-                this.setData({
-                    busLanes: res.data.busLanes
-                });
-            } else {
-                console.error('获取公交专用道数据失败:', res);
-                wx.showToast({
-                    title: '获取公交专用道信息失败',
-                    icon: 'none'
-                });
-            }
-        },
-        fail: (err) => {
-            console.error('请求公交专用道数据失败:', err);
-            wx.showToast({
-                title: '网络错误',
-                icon: 'none'
-            });
-        }
-    });
-    */
   },
 
   // 添加地图点击事件处理函数
