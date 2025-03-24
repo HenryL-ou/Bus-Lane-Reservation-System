@@ -353,7 +353,8 @@ Page({
     //     ]
     // };
     wx.request({
-      url: "http://175.178.116.5:3000/bus-lanes", // 调用后端 API
+      // url: "http://175.178.116.5:3000/bus-lanes", // 调用后端 API
+      url: " https://jjtrytry.asia/bus-lanes", // 调用后端 API
       method: "GET",
       success: (res) => {
           if (res.statusCode === 200) {
@@ -388,7 +389,7 @@ Page({
       fail: (err) => {
           console.error("请求公交专用道数据失败:", err);
           wx.showToast({
-              title: "网络错误",
+              title: "网络错误，请求公交专用道数据失败",
               icon: "none"
           });
       }
